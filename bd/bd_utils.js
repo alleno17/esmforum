@@ -7,15 +7,33 @@ function reconfig(nome) {
 }
 
 function query(query, params) {
-  return bd.prepare(query).get(params);
+  const stmt = bd.prepare(query);
+
+  if (params === undefined) {
+    return stmt.get();
+  }
+
+  return stmt.get(params);
 }
 
 function queryAll(query, params) {
-  return bd.prepare(query).all(params);
+  const stmt = bd.prepare(query);
+
+  if (params === undefined) {
+    return stmt.all();
+  }
+
+  return stmt.all(params);
 }
 
 function exec(statement, params) {
-  return bd.prepare(statement).run(params);
+  const stmt = bd.prepare(statement);
+
+  if (params === undefined) {
+    return stmt.run();
+  }
+
+  return stmt.run(params);
 }
 
 exports.reconfig = reconfig;
