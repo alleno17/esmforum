@@ -23,6 +23,8 @@ As principais funcionalidades consideradas para evolução do sistema são:
 - Categorização por tags
 - Perfil de usuário
 - Notificação de novas respostas
+- Editar pergunta
+- Excluir pergunta
 
 # Utilização do quadro
 
