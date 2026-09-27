@@ -1,38 +1,53 @@
-## Instalação do Backend
+# Instalação e Execução do ESM Forum
 
-Primeiro, clone o repositório:
+# Pré-requisitos
 
-``` git clone https://github.com/mtov/esmforum.git```
+- Git
+- Node.js 18
+- npm
 
-Em seguida, instale a versão mais recente do Node.js. Mais informações [aqui](https://nodejs.org/en/download).
+# Backend
 
-Instale também as dependências do projeto:
+Clone o repositório:
 
-```console
-npm install 
-```
+git clone https://github.com/alleno17/esmforum.git
 
-Você também vai precisar do `sqlite`. Para testar se ele já está instalado, use: `sqlite3 --version`. 
+Entre na pasta:
 
-Se o sqlite não estiver instalado,  verifique no site da sua distribuição como fazer essa instalação. Por exemplo, para distribuições Debian, basta usar:
+cd esmforum
 
-```console
-sudo apt install sqlite3
-```
+Instale as dependências:
 
-## Execução do Backend
+npm install
 
-Para executar o servidor, digite no diretório raiz:
+Execute o servidor:
 
-``` node server.js```
+npm start
 
-Se em algum momento você quiser "zerar" o banco de dados do sistema, você pode usar:
+O backend será executado na porta 5000.
 
-```
-cd bd
-./criar_bd.sh
-```
+# Frontend
 
-## Instalação e Execução do Frontend
+Clone o repositório:
 
-Veja informações neste [repositório](https://github.com/mtov/esmforum-react).
+git clone https://github.com/alleno17/esmforum-react.git
+
+Entre na pasta:
+
+cd esmforum-react
+
+Instale as dependências:
+
+npm install
+
+Execute a aplicação:
+
+npm start
+
+Acesse no navegador:
+
+http://localhost:3000
+
+# Verificação
+
+Com o backend e o frontend em execução, a página inicial do ESM Forum deve exibir a lista de perguntas e permitir o cadastro de uma nova pergunta.
